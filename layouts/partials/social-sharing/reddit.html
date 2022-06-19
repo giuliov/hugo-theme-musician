@@ -1,0 +1,6 @@
+{{- $title := .Scratch.Get "title" -}}
+{{- $url := .Scratch.Get "url" -}}
+{{- $body := .Scratch.Get "body" -}}
+<a href="https://reddit.com/submit?url={{ $url }}&title={{ $title }}}" class="social-media-sharing-button reddit" target="_blank" rel="noopener" aria-label='{{ i18n "share-button-label" }} Reddit'>
+<i class="fab fa-reddit-alien" aria-hidden="true"></i>
+</a>

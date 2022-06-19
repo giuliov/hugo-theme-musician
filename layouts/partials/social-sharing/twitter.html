@@ -1,0 +1,6 @@
+{{- $title := .Scratch.Get "title" -}}
+{{- $url := .Scratch.Get "url" -}}
+{{- $body := .Scratch.Get "body" -}}
+<a href="https://twitter.com/share?url={{ $url }}&text={{ $title }}&via={{with .Site.Social.twitter }}{{ . }}{{ end }}" class="social-media-sharing-button twitter" target="_blank" rel="noopener" aria-label='{{ i18n "share-button-label" }} Twitter'>
+<i class="fab fa-twitter" aria-hidden="true"></i>
+</a>

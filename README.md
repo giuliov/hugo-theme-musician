@@ -1,21 +1,24 @@
-# hugo-theme-musician
-Hugo theme
+# Musician
+
+A Hugo Theme for Musicians
 
 ## TODO
 
-- [ ] split theme Git
-- [ ] GH pages
-- [ ] GH actions
-- [ ] butta Netlify
+- [x] Share -LinkedIn +Instagram
 - [ ] social links
   - Insta @rebeccavian
   - YT  https://www.youtube.com/channel/UCQ0ZuTNNmFhTCSo0CzxxsJQ
 - [ ] archetipes
+- [ ] style concert/single
+- [ ] pic&vid card-style
+- [ ] footer band (see Toha)
+- [ ] 404
 - [ ] media queries in contacts
 - [ ] media queries in concerts
 - [ ] media queries in photos
 - [ ] media queries in videos
 - [ ] cookie policy
+- [ ] share => ical
 
 ## Setup
 
@@ -41,6 +44,13 @@ hugo serve
 <https://hugocodex.org/>  
 <https://css-tricks.com/>  
 [Create A Dark/Light Mode Switch with CSS Variables](https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8)  
+
+## Instagram
+
+Sharing a post Instagram is non-trivial.
+see https://stackoverflow.com/a/66296656
+and https://developers.facebook.com/docs/instagram-api/guides/content-publishing/
+
 
 ## Form services
 

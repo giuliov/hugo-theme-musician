@@ -1,0 +1,6 @@
+{{- $title := .Scratch.Get "title" -}}
+{{- $url := .Scratch.Get "url" -}}
+{{- $body := .Scratch.Get "body" -}}
+<a href="https://api.whatsapp.com/send?text={{ $title }} {{ $url }}" class="social-media-sharing-button whatsapp" target="_blank" rel="noopener" aria-label='{{ i18n "share-button-label" }} WhatsApp'>
+<i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a>

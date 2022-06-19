@@ -2,6 +2,15 @@ _merge: deep
 
 params:
   showHiddenTest: false # runs layouts/partials/helpers/hidden-test.html in pages
+  socialSharing: # order is respected
+  - email
+  - facebook
+  - linkedin
+  - mail # same as email
+  - reddit
+  - telegram
+  - twitter
+  - whatsapp
 
 # no taxonomies
 disableKinds:
