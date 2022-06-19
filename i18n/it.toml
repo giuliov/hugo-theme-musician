@@ -1,0 +1,41 @@
+[404-error]
+other = 'Ahia... la pagina non esiste'
+[404-backhome]
+other = 'Torna alla Home'
+[share-button-desc]
+other = 'Condividi'
+[share-button-label]
+other = 'Condividi su'
+[prev-next-section-aria]
+other = 'Navigazione degli articoli'
+
+[contact-form-required-warning]
+other = 'Indica un campo obbligatorio.'
+[contact-form-label-name]
+other = 'Nome e cognome'
+[contact-form-placeholder-name]
+other = 'Nome Cognome'
+[contact-form-label-email]
+other = 'Email'
+[contact-form-placeholder-email]
+other = 'Email'
+[contact-form-label-message]
+other = 'Messaggio'
+[contact-form-placeholder-message]
+other = 'Inserire il testo del Messaggio'
+[contact-form-button-send]
+other = 'Invia'
+
+[concerts]
+other = 'Concerti'
+[pictures]
+other = 'Foto'
+[videos]
+other = 'Video'
+
+[at-time]
+other = 'alle'
+[previous]
+other = 'Precedente'
+[next]
+other = 'Successivo'

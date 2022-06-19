@@ -1,0 +1,40 @@
+{{- $addressLatLong := "" -}}
+{{- $addressMapURL := "" -}}
+{{- $address := "" -}}
+{{- with .Params -}}
+{{- $address = printf "%s,%s,%s" .address .city .country | urlquery -}}
+{{- end -}}
+{{- with site.Params.mapquestapikey -}}
+{{- $url := printf "https://www.mapquestapi.com/geocoding/v1/address?key=%s&location=%s" . $address -}}
+{{- $mapped := getJSON $url -}}
+{{- range first 1 $mapped.results -}}
+{{- range first 1 .locations -}}
+{{- $addressLatLong = printf "%f;%f" .latLng.lat .latLng.lng -}}
+{{- $addressMapURL = .mapUrl -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//hacksw/handcal//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTAMP:{{ dateFormat "20060102T150405" .Date }}
+UID:{{ .File.UniqueID }}@{{ site.Params.dns }}
+ORGANIZER:mailto:webmaster@{{ site.Params.dns }}
+{{ $eventDate := .Params.EventDateTime | time -}}
+{{- $isoEventDate := $eventDate.Format "2006-01-02T15:04:05Z0700" -}}
+DTSTART:{{ $isoEventDate }}
+DTEND:{{ $isoEventDate }}
+STATUS:CONFIRMED
+CATEGORIES:CONCERT
+SUMMARY:{{ .Title }}
+DESCRIPTION:{{ .Params.description }} (Info: {{ with .Params.eventlink }}{{ . }}{{ else }}{{ .Permalink }}{{ end }})
+X-ALT-DESC;FMTTYPE=text/html:{{.Title}}<br>{{ $p := .Params }}{{ with .Params.location }}{{ $p.location }}<br>{{ $p.address }}<br>{{ $p.city }} ({{ $p.country }})<br><br><img src='{{ $addressMapURL }}' alt="Map">{{else}}TBD{{end}}<br>{{ with .Params.eventlink }}<a href='{{ . }}'></a>{{ else }}<a href='{{ .Permalink }}'></a>{{ end }}
+LOCATION:{{ $p := .Params }}{{ with .Params.location }}{{ $p.location }} — {{ $p.address }}, {{ $p.city }} ({{ $p.country }}){{ else }}TBD{{ end }}
+{{ with site.Params.mapquestapikey -}}
+GEO:{{ $addressLatLong }}
+{{- end }}
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,4 @@
+{{- with .Params.icon -}}
+{{- $icon := printf "<i class=\"fa-solid fa-%s\" aria-hidden=\"true\"></i> " . | safeHTML -}}
+{{- $icon -}}
+{{- end -}}

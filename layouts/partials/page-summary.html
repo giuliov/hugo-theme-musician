@@ -1,0 +1,5 @@
+{{ $isoDate := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default ":date_long" }}
+{{ $localDate := time.Format $dateFormat .PublishDate }}
+<i class="fa-solid fa-calendar" aria-hidden="true"></i> <time datetime="{{ $isoDate }}">{{ $localDate }}</time>
+{{ partial "social-sharing.html" . }}

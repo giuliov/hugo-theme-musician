@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}" dir="{{ .Language.LanguageDirection | default "ltr" }}">
+<head>
+  <!-- Last update: {{ .Site.LastChange }} -->
+  {{- partial "head.html" . -}}
+  {{- block "resources" . -}}{{- end -}}
+  {{- block "head" . -}}{{- end -}}
+</head>
+<body class='{{block "bodyClass" .}}body-page{{end}}'>
+  {{- partial "header/site-header.html" . -}}
+  <main id="main" class='{{block "mainClass" .}}main{{end}}'>
+  {{- block "main" . }}{{- end }}
+  {{- partial "helpers/hidden-test.html" . -}}
+  </main>
+  <footer class='{{block "footerClass" .}}footer-default{{end}}'>
+  {{- partialCached "footer/site-footer.html" . -}}
+  </footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+_merge: deep
+en:
+  weight: 1
+  languageName: English
+  params:
+    flag: gb
+  menu:
+    main:
+    - name: "Home"
+      url: "/"
+      weight: 10
+      params:
+        #icon: "house"
+    - name: "Concerts"
+      url: "/concerts/"
+      weight: 20
+      params:
+        #icon: "music"
+    - name: "Bio"
+      url: "/bio/"
+      weight: 30
+      params:
+        #icon: "user"
+    - name: "Photos"
+      url: "/pictures/"
+      weight: 50
+      params:
+        #icon: "camera"
+    - name: "Videos"
+      url: "/videos/"
+      weight: 60
+      params:
+        #icon: "video"
+    - name: "Contacts"
+      url: "/contacts/"
+      weight: 90
+      params:
+        #icon: "envelope-open"
+it:
+  weight: 2
+  languageName: Italiano
+  params:
+    flag: it
+  menu:
+    main:
+    - name: "Home"
+      url: "/"
+      weight: 10
+      params:
+        #icon: "house"
+    - name: "Concerti"
+      url: "/concerts/"
+      weight: 20
+      params:
+        #icon: "headphones"
+    - name: "Bio"
+      url: "/bio/"
+      weight: 30
+      params:
+        #icon: "user"
+    - name: "Foto"
+      url: "/pictures/"
+      weight: 50
+      params:
+        #icon: "camera"
+    - name: "Video"
+      url: "/videos/"
+      weight: 60
+      params:
+        #icon: "video"
+    - name: "Contatti"
+      url: "/contacts/"
+      weight: 90
+      params:
+        #icon: "envelope-open"

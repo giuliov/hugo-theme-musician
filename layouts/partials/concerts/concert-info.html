@@ -1,0 +1,22 @@
+{{ .Params.subtitle }}
+{{ $eventDate := .Params.EventDateTime | time -}}
+{{- $isoEventDate := $eventDate.Format "2006-01-02T15:04:05Z0700" -}}
+{{- $localEventDate := time.Format ":date_long" $eventDate -}}
+{{- $localEventTime := time.Format ":time_short" $eventDate -}}
+<div class="concert-date">
+{{ with  .OutputFormats.Get "calendar" -}}
+<a href="{{ .Permalink | safeURL }}">
+{{- else -}}
+{{- end }}
+  <time datetime="{{ $isoEventDate }}">{{ $localEventDate }}</time>
+{{ with  .OutputFormats.Get "calendar" -}}
+</a>
+{{- else -}}
+{{- end }}
+<br>{{ i18n "at-time" }} {{ $localEventTime }}
+</div>
+<div class="concert-location">
+{{ .Params.location }}<br>
+{{ .Params.address }}<br>
+{{ .Params.city }}
+</div>

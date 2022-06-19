@@ -1,0 +1,36 @@
+{{- with $.Page.Site.Params.contactformurl -}}
+<form accept-charset="UTF-8" action="{{ . }}" method="POST" class="contact-form">
+
+  <div>
+    <label aria-hidden="true"></label>
+    {{- $dir := site.Language.LanguageDirection | default "ltr" -}}
+    {{- if eq $dir "ltr" -}}<span class="required-field">*</span> {{ end -}}
+    {{ i18n "contact-form-required-warning" }}
+    {{- if ne $dir "ltr" }} <span class="required-field">*</span>{{- end -}}
+  </div>
+
+  <div>
+    <label for="name">{{ i18n "contact-form-label-name" }}</label>
+    <input type="text" name="name" id="name" maxlength="100" autocomplete="true" spellcheck="false" placeholder='{{ i18n "contact-form-placeholder-name" }}' required aria-required="true">
+    <span class="required-field" aria-hidden="true">*</span>
+  </div>
+
+  <div>
+    <label for="name">{{ i18n "contact-form-label-email" }}</label>
+    <input type="email" name="email" id="email" autocomplete="true" spellcheck="false" placeholder='{{ i18n "contact-form-placeholder-email" }}' required aria-required="true">
+    <span class="required-field" aria-hidden="true">*</span>
+  </div>
+  
+  <div>
+    <label for="name">{{ i18n "contact-form-label-message" }}</label>
+    <textarea name="message" id="message" rows="5" autocomplete="false" spellcheck="true" placeholder='{{ i18n "contact-form-placeholder-message" }}' required aria-required="true"></textarea>
+    <span class="required-field" aria-hidden="true">*</span>
+  </div>
+  
+  <div>
+    <label aria-hidden="true"></label>
+    <button type="submit">{{ i18n "contact-form-button-send" }}</button>
+  </div>
+  
+</form>
+{{- end -}}

@@ -1,0 +1,9 @@
+_merge: deep
+
+params:
+  showHiddenTest: false # runs layouts/partials/helpers/hidden-test.html in pages
+
+# no taxonomies
+disableKinds:
+- taxonomy
+- term

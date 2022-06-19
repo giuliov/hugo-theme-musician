@@ -1,0 +1,40 @@
+$label-width: 10em;
+$field-width: 20em;
+
+.contact-form {
+  margin-top: 4em;
+  margin-left: 20%;
+  
+  .required-field {
+    color: var(--text-required-color);
+  }
+
+  p {
+    margin: 1em;
+  }
+
+  div {
+    margin: 0.6em;
+  }
+
+  div * {
+    vertical-align: top;
+  }
+
+  label {
+    display: inline-block;
+    min-width: $label-width;
+  }
+
+  input {
+    min-width: $field-width;
+  }
+
+  textarea {
+    min-width: $field-width;
+  }
+
+  button {
+    padding: 0.5em 2em;
+  }
+}

@@ -1,0 +1,24 @@
+{{ define "main" }}
+<article class="container">
+
+<h1 class="display-1" >{{ .Title }}</h1>
+{{ $title := .Title }}
+{{ with .Resources.GetMatch "*.jpg" }}
+<img src='{{ .RelPermalink }}' title="{{ $title }}" />
+{{ end }}
+{{ partial "concerts/concert-info.html" . }}
+{{ .Content }}
+
+<div class="container" id="prevNextNav">
+  {{ with .PrevInSection }}
+    <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+  {{ end }}
+  {{ with .NextInSection }}
+    <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
+  {{ end }}
+</div>
+
+{{ partial "social-sharing.html" . }}
+
+</article>
+{{ end }}

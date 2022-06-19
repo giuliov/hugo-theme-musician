@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="container">
+<h1>{{ i18n "pictures" }}</h1>
+
+<ul class="image-gallery">
+{{ range where .Site.RegularPages "Section" .Section }}
+  {{- $image := (index (.Resources.ByType "image") 0) -}}
+  {{- $imageurl := $image.RelPermalink -}}
+  {{- $imagetitle := .Title -}}
+  <li>
+    <a href="{{ ($image.Fit "1600x1600 q50").Permalink }}" title="{{ $imagetitle }}" class="lightbox-image">
+    <figure>
+      <img src="{{ ($image.Fill "300x300 q50").Permalink }}" alt="{{ $imagetitle }}" title="{{ $imagetitle }}">
+      <figcaption>{{ $imagetitle }}</figcaption>
+    </figure>
+    </a>
+  </li>
+{{ end }}
+</ul>
+
+</div>
+{{ end }}

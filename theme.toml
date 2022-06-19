@@ -1,0 +1,12 @@
+name = "Musician"
+license = "Custom"
+licenselink = "https://github.com/giuliov/hugo-musician/blob/master/LICENSE"
+description = ""
+homepage = "https://github.com/giuliov/hugo-musician/"
+tags = []
+features = ["minimalist", "social", "analytics"]
+min_version = "0.100.0"
+
+[author]
+  name = "Giulio Vian"
+  homepage = "http://blog.casavian.eu/"

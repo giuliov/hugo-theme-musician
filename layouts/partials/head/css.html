@@ -1,0 +1,6 @@
+{{ $sassTemplate := resources.Get "sass/musician.scss" }}
+{{/* transpiler is libsass by default, can be dartsass */}}
+{{ $sassTranspilerOptions := (dict "transpiler" "libsass" "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction) ) }}
+{{ $themeCss := $sassTemplate | resources.ExecuteAsTemplate "sass/musician.scss" . | resources.ToCSS $sassTranspilerOptions }}
+<link rel="stylesheet" type="text/css" href="{{ $themeCss.Permalink }}">
+<link rel="stylesheet" type="text/css" href="/css/custom.css">

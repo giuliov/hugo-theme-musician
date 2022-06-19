@@ -1,0 +1,23 @@
+{{- $page := .Page -}}
+{{- with site.Params.showHiddenTest }}
+<hr>
+
+IsHome: {{ $page.IsHome }}
+<br>
+RelPermalink: {{ $page.RelPermalink }}
+<br>
+CurrentSection: {{ $page.CurrentSection.RelPermalink }}
+<br>
+Section: {{ $page.CurrentSection }}
+<br>
+Type: {{ $page.Type }}
+<br>
+
+{{- range $menuItemIndex, $menuItem := site.Menus.main }}
+Menu Name: {{ .Name }} &nbsp;&nbsp; URL: {{ .URL }}<br>
+Active: {{- (eq (printf "/%s/" $page.Type) .URL) -}}<br>
+{{ end -}}
+<br>
+
+<hr>
+{{ end -}}

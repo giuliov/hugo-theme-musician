@@ -1,0 +1,63 @@
+@import 'root-variables.scss';
+@import 'modern-reset.scss';
+@import 'general-styles.scss';
+@import 'typography.scss';
+@import 'navigation.scss';
+@import 'utility.scss';
+@import 'pictures.scss';
+@import 'videos.scss';
+@import 'contact-form';
+
+.logo {
+  margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+  /* HACK */
+  min-width: 1rem;
+  max-width: 4rem;
+  min-height: 1rem;
+  max-height: 4rem;
+}
+
+
+
+.body-home {
+  @include default-body;
+  {{ partial "helpers/background.scss" }}
+}
+
+.body-page {
+  @include default-body;
+  background: var(--background-color);
+}
+
+.body-not-found {
+  @include default-body;
+}
+
+.footer-default {
+  color: var(--footer-text-color);
+  align-self: center;
+}
+
+.concert-row-separator {
+  height: 1px;
+  width: 100%;
+}
+.concert-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 4fr 1fr;
+}
+.concert-title {
+  padding-right: 1em;
+}
+.concert-summary {
+  padding: 0 1em;
+}
+.concert-date {
+  text-align: center;
+}
+.concert-location {
+  text-align: center;
+}
+.concert-share {
+  text-align: right;
+}

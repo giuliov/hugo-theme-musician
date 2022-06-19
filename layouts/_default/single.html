@@ -1,0 +1,8 @@
+{{ define "main" }}
+<article>
+<h1>{{ .Title }}</h1>
+{{ partial "page-summary.html" . }}
+<br><br>
+{{ .Content }}
+</article>
+{{ end }}

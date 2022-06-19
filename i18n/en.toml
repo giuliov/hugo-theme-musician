@@ -1,0 +1,41 @@
+[404-error]
+other = 'Uh, oh... page not found'
+[404-backhome]
+other = 'Back to Home'
+[share-button-desc]
+other = 'Share'
+[share-button-label]
+other = 'Share on'
+[prev-next-section-aria]
+other = 'Article navigation'
+
+[contact-form-required-warning]
+other = 'Indicates required field'
+[contact-form-label-name]
+other = 'Your Name'
+[contact-form-placeholder-name]
+other = 'Your Name'
+[contact-form-label-email]
+other = 'Your Email'
+[contact-form-placeholder-email]
+other = 'Your Email'
+[contact-form-label-message]
+other = 'Message'
+[contact-form-placeholder-message]
+other = 'Enter Message here'
+[contact-form-button-send]
+other = 'Send'
+
+[concerts]
+other = 'Concerts'
+[pictures]
+other = 'Pictures'
+[videos]
+other = 'Videos'
+
+[at-time]
+other = 'at'
+[previous]
+other = 'Previous'
+[next]
+other = 'Next'
