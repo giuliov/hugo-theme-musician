@@ -21,7 +21,7 @@
 
 .body-home {
   @include default-body;
-  {{ partial "helpers/background.scss" }}
+  {{ partial "helpers/background-image.scss" }}
 }
 
 .body-page {
@@ -31,11 +31,47 @@
 
 .body-not-found {
   @include default-body;
+  background: var(--background-color);
 }
 
 .footer-default {
+  padding: 1em 2em;
   color: var(--footer-text-color);
-  align-self: center;
+  background-color: var(--footer-background-color);
+}
+
+.footer-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  column-gap: 1em;
+  color: var(--footer-text-color);
+  a {
+    color: var(--footer-text-color);
+  }
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-center {
+  text-align: center;
+  a {
+    color: var(--footer-social-color);
+  }
+}
+
+.footer-right {
+  
+
+  * {
+    display: inline;
+    vertical-align: middle;
+  }
+}
+
+.social-media-button {
 }
 
 .concert-row-separator {

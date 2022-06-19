@@ -1,7 +1,11 @@
+[powered-by-hugo]
+other = "Powered by"
 [404-error]
 other = 'Uh, oh... page not found'
 [404-backhome]
 other = 'Back to Home'
+[social-media-button-label]
+other = "Jump to {{ .copyright }}'s {{ .social }} page"
 [share-button-desc]
 other = 'Share'
 [share-button-label]

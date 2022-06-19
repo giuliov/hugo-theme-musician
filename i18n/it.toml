@@ -1,7 +1,11 @@
+[powered-by-hugo]
+other = "Generato con"
 [404-error]
 other = 'Ahia... la pagina non esiste'
 [404-backhome]
 other = 'Torna alla Home'
+[social-media-button-label]
+other = "Apre la pagina {{ .social }} di {{ .copyright }}"
 [share-button-desc]
 other = 'Condividi'
 [share-button-label]

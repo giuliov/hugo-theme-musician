@@ -5,9 +5,7 @@ A Hugo Theme for Musicians
 ## TODO
 
 - [x] Share -LinkedIn +Instagram
-- [ ] social links
-  - Insta @rebeccavian
-  - YT  https://www.youtube.com/channel/UCQ0ZuTNNmFhTCSo0CzxxsJQ
+- [x] social links
 - [ ] archetipes
 - [ ] style concert/single
 - [ ] pic&vid card-style
@@ -30,7 +28,7 @@ Set-Alias hugo "C:\bin\hugo\${hugoVersion}\hugo.exe"
 hugo serve
 ```
 
-# Dependencies
+## Dependencies
 
 - [flag-icons](https://github.com/lipis/flag-icons)  
 - [Font Awesome 6.1.1 For The Web](https://fontawesome.com/)  
@@ -44,6 +42,7 @@ hugo serve
 <https://hugocodex.org/>  
 <https://css-tricks.com/>  
 [Create A Dark/Light Mode Switch with CSS Variables](https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8)  
+<https://codepen.io/>  
 
 ## Instagram
 
@@ -66,7 +65,7 @@ and https://developers.facebook.com/docs/instagram-api/guides/content-publishing
 - zapier => form SaaS -> :-(
 - zapier => webjooks => Premium -> :-(
 
-# Quick links
+## Quick links
 
 [Hugo bin](https://github.com/gohugoio/hugo/releases)  
 [Hugo docs](https://gohugo.io/documentation/)  
@@ -84,7 +83,6 @@ and https://developers.facebook.com/docs/instagram-api/guides/content-publishing
 <https://developers.google.com/fonts/docs/getting_started>  
 <https://fontawesome.com/>  
 
-
+### Misc
 <https://tachyons-bootstrap.dwyl.com/>
-
 <https://docs.netlify.com/>
