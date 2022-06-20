@@ -7,8 +7,10 @@ A Hugo Theme for Musicians
 - [x] Share -LinkedIn +Instagram
 - [x] social links
 - [x] footer since
-- [ ] archetipes
+- [x] archetypes `hugo new content\concerts\2023-01-01\dublin.en.md -k concert`
+- [x] favicon
 - [ ] style concert/single
+- [ ] year grouping on past concerts/list
 - [ ] pic&vid card-style
 - [ ] footer band (see Toha)
 - [ ] 404
@@ -18,6 +20,7 @@ A Hugo Theme for Musicians
 - [ ] media queries in videos
 - [ ] cookie policy
 - [ ] share => ical
+- [ ] https://evil-icons.io/ to replace Font Awesome
 
 ## Setup
 
@@ -87,3 +90,4 @@ and https://developers.facebook.com/docs/instagram-api/guides/content-publishing
 ### Misc
 <https://tachyons-bootstrap.dwyl.com/>
 <https://docs.netlify.com/>
+<https://github.com/SVG-Edit/svgedit>
