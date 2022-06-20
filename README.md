@@ -6,6 +6,7 @@ A Hugo Theme for Musicians
 
 - [x] Share -LinkedIn +Instagram
 - [x] social links
+- [x] footer since
 - [ ] archetipes
 - [ ] style concert/single
 - [ ] pic&vid card-style

@@ -1,0 +1,3 @@
+{{- $startYear :=.Site.Params.startDate | time.Format "2006" -}}
+{{- $thisYear := now.Format "2006" -}}
+Copyright &copy; {{ if ne $startYear $thisYear }}{{ $startYear }}-{{ end }}{{ $thisYear }} {{ .Site.Params.copyrightHolder | markdownify }}

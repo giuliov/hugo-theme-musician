@@ -4,7 +4,7 @@
     <div class="footer-left">
     </div>
     <div class="footer-center">
-      <p>Copyright (c) {{ now.Format "2006"}} {{ .Site.Params.copyrightHolder | markdownify }} &nbsp;
+      <p>{{ partial "footer/copyright.html" . }} &nbsp;
       {{- range $key,$value := site.Params.socials -}}
       {{- $partial := printf "socials/%s.html" $key -}}
       {{ partial $partial (dict "copyright" $.Site.Params.copyrightHolder "key" $key "data" $value) }}
