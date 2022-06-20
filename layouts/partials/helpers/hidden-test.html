@@ -2,15 +2,14 @@
 {{- with site.Params.showHiddenTest }}
 <hr>
 
+{{ $d := now | time.AsTime }}
+{{ $d = $d.AddDate 0 0 1 }}
+Date: {{ $d }}
+<br>
+DateF: {{ $d.Format "2006-01-02T15:04:05Z07:00" }}
+<br>
+
 IsHome: {{ $page.IsHome }}
-<br>
-RelPermalink: {{ $page.RelPermalink }}
-<br>
-CurrentSection: {{ $page.CurrentSection.RelPermalink }}
-<br>
-Section: {{ $page.CurrentSection }}
-<br>
-Type: {{ $page.Type }}
 <br>
 
 {{- range $menuItemIndex, $menuItem := site.Menus.main }}
