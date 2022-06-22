@@ -7,9 +7,13 @@ other = 'Torna alla Home'
 [social-media-button-label]
 other = "Apre la pagina {{ .social }} di {{ .copyright }}"
 [share-button-desc]
-other = 'Condividi'
+other = 'Condividi su'
 [share-button-label]
 other = 'Condividi su'
+[prev-in-section]
+other = 'Precedente: '
+[next-in-section]
+other = 'Successivo: '
 [prev-next-section-aria]
 other = 'Navigazione degli articoli'
 

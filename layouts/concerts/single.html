@@ -4,21 +4,25 @@
 <h1 class="display-1" >{{ .Title }}</h1>
 {{ $title := .Title }}
 {{ with .Resources.GetMatch "*.jpg" }}
-<img src='{{ .RelPermalink }}' title="{{ $title }}" />
+<div class="banner-image-container">
+<img class="banner-image" src='{{ .RelPermalink }}' title="{{ $title }}" />
+</div>
 {{ end }}
+<div class="concert-single-info">
 {{ partial "concerts/concert-info.html" . }}
-{{ .Content }}
-
-<div class="container" id="prevNextNav">
-  {{ with .PrevInSection }}
-    <a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
-  {{ end }}
-  {{ with .NextInSection }}
-    <a class="next" href="{{.Permalink}}"> {{.Title}}</a>
-  {{ end }}
+{{ partial "social-sharing.html" . }}
 </div>
 
-{{ partial "social-sharing.html" . }}
+{{ .Content }}
 
 </article>
+
+<div class="post-navigation" id="prevNextNav">
+  {{ with .PrevInSection }}
+    {{ i18n "next-in-section" }}<a class="previous" href="{{.Permalink}}">{{.Title}}</a>
+  {{ end }}
+  {{ with .NextInSection }}
+  {{ i18n "prev-in-section" }}<a class="next" href="{{.Permalink}}">{{.Title}}</a>
+  {{ end }}
+</div>
 {{ end }}

@@ -10,6 +10,10 @@ other = "Jump to {{ .copyright }}'s {{ .social }} page"
 other = 'Share'
 [share-button-label]
 other = 'Share on'
+[prev-in-section]
+other = 'Previous: '
+[next-in-section]
+other = 'Next: '
 [prev-next-section-aria]
 other = 'Article navigation'
 

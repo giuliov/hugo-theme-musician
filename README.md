@@ -9,8 +9,7 @@ A Hugo Theme for Musicians
 - [x] footer since
 - [x] archetypes `hugo new content\concerts\2023-01-01\dublin.en.md -k concert`
 - [x] favicon
-- [ ] style concert/single
-- [ ] year grouping on past concerts/list
+- [x] style concert/single
 - [ ] pic&vid card-style
 - [ ] footer band (see Toha)
 - [ ] 404
@@ -18,9 +17,11 @@ A Hugo Theme for Musicians
 - [ ] media queries in concerts
 - [ ] media queries in photos
 - [ ] media queries in videos
+- [ ] year grouping on past concerts/list
 - [ ] cookie policy
 - [ ] share => ical
-- [ ] https://evil-icons.io/ to replace Font Awesome
+- [ ] replace Font Awesome with https://evil-icons.io/
+- [ ] explore https://icomoon.io/
 
 ## Setup
 
