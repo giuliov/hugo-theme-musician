@@ -5,10 +5,10 @@
 
 <section class="w-100 prev-next-section" aria-label='{{ i18n "prev-next-section-aria" }}'>
   {{ with .PrevInSection }}
-    <a class="previous pointer br2 ba b--black-20 bg-white pa2 ml1 mv1 bg-animate hover-bg-light-gray border-box" href="{{.Permalink}}">{{ i18n "previous" }}: {{.Title}}</a>
+    <a class="previous" href="{{.Permalink}}">{{ i18n "previous" }}: {{.Title}}</a>
   {{ end }}
   {{ with .NextInSection }}
-    <a class="next pointer br2 ba b--black-20 bg-white pa2 ml1 mv1 bg-animate hover-bg-light-gray border-box" href="{{.Permalink}}">{{ i18n "next" }}: {{.Title}}</a>
+    <a class="next" href="{{.Permalink}}">{{ i18n "next" }}: {{.Title}}</a>
   {{ end }}
 </section>
 </article>

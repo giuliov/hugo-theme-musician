@@ -2,21 +2,20 @@
 <div class="container">
 <h1>{{ i18n "videos" }}</h1>
 
-<ul class="video-gallery">
+<div class="video-gallery">
 {{ range where .Site.RegularPages "Section" .Section }}
   {{- $image := (index (.Resources.ByType "image") 0) -}}
-  {{- $imageurl := $image.RelPermalink -}}
   {{- $imagetitle := .Title -}}
-  <li>
-    <a href="{{ .Permalink }}" title="{{ $imagetitle }}" class="lightbox-image">
-    <figure>
+  <article class="video-card">
+    <header>
+      <h2>{{ $imagetitle }}</h2>
+    </header>
+    <a href="{{ .Permalink }}" title="{{ $imagetitle }}">
       <img src="{{ ($image.Fill "300x300 q50").Permalink }}" alt="{{ $imagetitle }}" title="{{ $imagetitle }}">
-      <figcaption>{{ $imagetitle }}</figcaption>
-    </figure>
     </a>
-  </li>
+  </article>
 {{ end }}
-</ul>
-    
+</div>
+
 </div>
 {{ end }}

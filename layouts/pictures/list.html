@@ -2,21 +2,26 @@
 <div class="container">
 <h1>{{ i18n "pictures" }}</h1>
 
-<ul class="image-gallery">
+<div class="image-gallery">
+{{ $counter := 0 }}
 {{ range where .Site.RegularPages "Section" .Section }}
+  {{ $counter = add $counter 1 }}
   {{- $image := (index (.Resources.ByType "image") 0) -}}
-  {{- $imageurl := $image.RelPermalink -}}
+  {{/*- $imageurl := $image.RelPermalink -*/}}
   {{- $imagetitle := .Title -}}
-  <li>
-    <a href="{{ ($image.Fit "1600x1600 q50").Permalink }}" title="{{ $imagetitle }}" class="lightbox-image">
-    <figure>
+  <article class="image-card">
+    <header>
+      <h2>{{ $imagetitle }}</h2>
+    </header>
+    <a href="#img{{ $counter }}" title="{{ $imagetitle }}">
       <img src="{{ ($image.Fill "300x300 q50").Permalink }}" alt="{{ $imagetitle }}" title="{{ $imagetitle }}">
-      <figcaption>{{ $imagetitle }}</figcaption>
-    </figure>
     </a>
-  </li>
+  </article>
+  <a href="#" class="lightbox" id="img{{ $counter }}">
+    <span style="background-image: url('{{ ($image.Fit "1600x1600 q50").Permalink }}')"></span>
+  </a>
 {{ end }}
-</ul>
+</div>
 
 </div>
 {{ end }}
