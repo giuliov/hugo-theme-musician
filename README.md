@@ -12,7 +12,9 @@ A Hugo Theme for Musicians
 - [x] style concert/single
 - [x] pic&vid card-style
 - [x] BUG: video card are bad
-- [ ] 404
+- [x] 404
+  > photo-1558458878-36802fc5f7f5.jfif (@ Unsplash by Marina Reich)
+- [ ] background images scaling
 - [ ] media queries in contacts
 - [ ] media queries in concerts
 - [ ] media queries in photos

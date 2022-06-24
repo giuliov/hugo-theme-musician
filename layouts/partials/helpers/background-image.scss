@@ -1,4 +1,4 @@
-{{ $originalBackgroundImage := resources.Get "images/home-background.jpg" }}
+{{ $originalBackgroundImage := resources.Get . }}
 {{ $tinyw := default "500x" }}
 {{ $smallw := default "800x" }}
 {{ $mediumw := default "1200x" }}
