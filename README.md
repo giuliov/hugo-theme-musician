@@ -10,15 +10,18 @@ A Hugo Theme for Musicians
 - [x] archetypes `hugo new content\concerts\2023-01-01\dublin.en.md -k concert`
 - [x] favicon
 - [x] style concert/single
-- [ ] pic&vid card-style
-- [ ] footer band (see Toha)
+- [x] pic&vid card-style
+- [x] BUG: video card are bad
 - [ ] 404
 - [ ] media queries in contacts
 - [ ] media queries in concerts
 - [ ] media queries in photos
 - [ ] media queries in videos
+- [ ] BUG: language switch should stay on page
 - [ ] year grouping on past concerts/list
 - [ ] cookie policy
+- [ ] footer band (see Toha)
+- [ ] [Instagram User Token Generator](https://developers.facebook.com/docs/instagram-basic-display-api/overview#user-token-generator)
 - [ ] share => ical
 - [ ] replace Font Awesome with https://evil-icons.io/
 - [ ] explore https://icomoon.io/
@@ -70,6 +73,51 @@ and https://developers.facebook.com/docs/instagram-api/guides/content-publishing
 - zapier => form SaaS -> :-(
 - zapier => webjooks => Premium -> :-(
 
+## Structuring your Sass Projects
+
+[Structuring your Sass Projects](https://itnext.io/structuring-your-sass-projects-c8d41fa55ed4)
+
+```
+sass/
+|
+|– abstracts/ (or utilities/)
+|   |– _variables.scss    // Sass Variables
+|   |– _functions.scss    // Sass Functions
+|   |– _mixins.scss       // Sass Mixins
+|
+|– base/
+|   |– _reset.scss        // Reset/normalize
+|   |– _typography.scss   // Typography rules
+|
+|– components/ (or modules/)
+|   |– _buttons.scss      // Buttons
+|   |– _carousel.scss     // Carousel
+|   |– _slider.scss       // Slider
+|
+|– layout/
+|   |– _navigation.scss   // Navigation
+|   |– _grid.scss         // Grid system
+|   |– _header.scss       // Header
+|   |– _footer.scss       // Footer
+|   |– _sidebar.scss      // Sidebar
+|   |– _forms.scss        // Forms
+|
+|– pages/
+|   |– _home.scss         // Home specific styles
+|   |– _about.scss        // About specific styles
+|   |– _contact.scss      // Contact specific styles
+|
+|– themes/
+|   |– _theme.scss        // Default theme
+|   |– _admin.scss        // Admin theme
+|
+|– vendors/
+|   |– _bootstrap.scss    // Bootstrap
+|   |– _jquery-ui.scss    // jQuery UI
+|
+`– main.scss              // Main Sass file
+```
+
 ## Quick links
 
 [Hugo bin](https://github.com/gohugoio/hugo/releases)  
@@ -92,3 +140,4 @@ and https://developers.facebook.com/docs/instagram-api/guides/content-publishing
 <https://tachyons-bootstrap.dwyl.com/>
 <https://docs.netlify.com/>
 <https://github.com/SVG-Edit/svgedit>
+
