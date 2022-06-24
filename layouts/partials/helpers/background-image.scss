@@ -1,54 +1,19 @@
 {{ $originalBackgroundImage := resources.Get . }}
-{{ $tinyw := default "500x" }}
-{{ $smallw := default "800x" }}
-{{ $mediumw := default "1200x" }}
-{{ $largew := default "1500x" }}
-{{ $hugew := default "2400x" }}
-{{ $tinyBackgroundImage := $originalBackgroundImage.Resize $tinyw }}
-{{ $smallBackgroundImage := $originalBackgroundImage.Resize $smallw }}
-{{ $mediumBackgroundImage := $originalBackgroundImage.Resize $mediumw }}
-{{ $largeBackgroundImage := $originalBackgroundImage.Resize $largew }}
-{{ $hugeBackgroundImage := $originalBackgroundImage.Resize $hugew }}
-{{ if lt $originalBackgroundImage.Width "500" }}
-  {{ $tinyBackgroundImage := $originalBackgroundImage}}
-  {{ $smallBackgroundImage := $originalBackgroundImage}}
-  {{ $mediumBackgroundImage := $originalBackgroundImage}}
-  {{ $largeBackgroundImage := $originalBackgroundImage}}
-  {{ $hugeBackgroundImage := $originalBackgroundImage}}
-{{ end }}
-{{ if lt $originalBackgroundImage.Width "800" }}
-  {{ $smallBackgroundImage := $originalBackgroundImage}}
-  {{ $mediumBackgroundImage := $originalBackgroundImage}}
-  {{ $largeBackgroundImage := $originalBackgroundImage}}
-  {{ $hugeBackgroundImage := $originalBackgroundImage}}
-{{ end }}
-{{ if lt $originalBackgroundImage.Width "1200" }}
-  {{ $mediumBackgroundImage := $originalBackgroundImage}}
-  {{ $largeBackgroundImage := $originalBackgroundImage}}
-  {{ $hugeBackgroundImage := $originalBackgroundImage}}
-{{ end }}
-{{ if lt $originalBackgroundImage.Width "1500" }}
-  {{ $largeBackgroundImage := $originalBackgroundImage}}
-  {{ $hugeBackgroundImage := $originalBackgroundImage}}
-{{ end }}
-{{ if lt $originalBackgroundImage.Width "2400" }}
-  {{ $hugeBackgroundImage := $originalBackgroundImage}}
-{{ end }}
+{{ $mobilew := default "375x" }}
+{{ $tabletw := default "768x" }}
+{{ $desktopw := default "1440x" }}
+{{ $mobileBackgroundImage := $originalBackgroundImage.Resize $mobilew }}
+{{ $tabletBackgroundImage := $originalBackgroundImage.Resize $tabletw }}
+{{ $desktopBackgroundImage := $originalBackgroundImage.Resize $desktopw }}
 
-  /* 0 to 299 */
-  background-image: url('{{ $tinyBackgroundImage.RelPermalink }}');
-  /* 300 to X */
-  @media (min-width: 500px) and (max-width: 800px) {
-    background-image: url('{{ $smallBackgroundImage.RelPermalink }}');
+  background-size: cover;
+  background-image: url('{{ $mobileBackgroundImage.RelPermalink }}');
+  @media (min-width: 35rem) {
+    background-position: center center;
+    background-image: url('{{ $tabletBackgroundImage.RelPermalink }}');
   }
-  @media (min-width: 801px) and (max-width: 1200px) {
-    background-image: url('{{ $mediumBackgroundImage.RelPermalink }}');
-  }
-  @media (min-width: 1201px) and (max-width: 1500px) {
-    background-image: url('{{ $largeBackgroundImage.RelPermalink }}');
-  }
-  @media (min-width: 1501px) and (max-width: 2400px) {
-    background-image: url('{{ $hugeBackgroundImage.RelPermalink }}');
+  @media (min-width: 45rem) {
+    background-image: url('{{ $desktopBackgroundImage.RelPermalink }}');
   }
   @media (min-width: 2401px) {
     background-image: url('{{ $originalBackgroundImage.RelPermalink }}');

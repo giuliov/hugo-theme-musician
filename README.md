@@ -14,7 +14,7 @@ A Hugo Theme for Musicians
 - [x] BUG: video card are bad
 - [x] 404
   > photo-1558458878-36802fc5f7f5.jfif (@ Unsplash by Marina Reich)
-- [ ] background images scaling
+- [x] background images scaling
 - [ ] media queries in contacts
 - [ ] media queries in concerts
 - [ ] media queries in photos
