@@ -1,29 +1,14 @@
-$label-width: 10em;
 $field-width: 20em;
 
 .contact-form {
-  margin-top: 4em;
-  margin-left: 20%;
+  display: grid;
   
   .required-field {
     color: var(--text-required-color);
   }
 
-  p {
-    margin: 1em;
-  }
-
   div {
-    margin: 0.6em;
-  }
-
-  div * {
-    vertical-align: top;
-  }
-
-  label {
-    display: inline-block;
-    min-width: $label-width;
+    margin: 1em auto;
   }
 
   input {
@@ -33,8 +18,9 @@ $field-width: 20em;
   textarea {
     min-width: $field-width;
   }
-
+  
   button {
+    max-width: 10em;
     padding: 0.5em 2em;
   }
 }

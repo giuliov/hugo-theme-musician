@@ -15,7 +15,7 @@ A Hugo Theme for Musicians
 - [x] 404
   > photo-1558458878-36802fc5f7f5.jfif (@ Unsplash by Marina Reich)
 - [x] background images scaling
-- [ ] media queries in contacts
+- [x] contacts for mobile
 - [ ] media queries in concerts
 - [ ] media queries in photos
 - [ ] media queries in videos
