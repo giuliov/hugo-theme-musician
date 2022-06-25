@@ -1,0 +1,46 @@
+.concert-list {
+  margin-top: 1em;
+}
+
+.concert-row {
+  display: grid;
+  grid-gap: 1em;
+  border-top: 2px solid;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.concert-single-info {
+  display: inline-flex;
+  align-items: center;
+  padding: 0em 0.5em 1.5em;
+  gap: 1em;
+}
+.concert-title {
+}
+.concert-summary {
+}
+.concert-date {
+  text-align: center;
+  width: max-content;
+  display: grid;
+  grid-template-columns: 1fr .1fr;
+  grid-gap: .5em;
+}
+.concert-calendar-link {
+  grid-column: 2;
+}
+
+@media (min-width: $mobileBreakSize) {
+  .concert-row {
+    grid-template-columns: 2fr 1fr 1fr 4fr 1fr;
+    grid-gap: 1em;
+  }
+  .concert-location {
+    text-align: center;
+  }
+}
+
+.post-navigation {
+  margin-top: 1.5em;
+  font-style: italic;
+}

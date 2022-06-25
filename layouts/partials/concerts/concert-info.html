@@ -4,17 +4,17 @@
 {{- $localEventDate := time.Format ":date_long" $eventDate -}}
 {{- $localEventTime := time.Format ":time_short" $eventDate -}}
 <div class="concert-date">
+  <span>
   <time datetime="{{ $isoEventDate }}">{{ $localEventDate }}</time>
   <br>{{ i18n "at-time" }} {{ $localEventTime }}
-</div>
-<div class="concert-calendar-link">
-  {{ with  .OutputFormats.Get "calendar" -}}
-  <a href="{{ .Permalink | safeURL }}">
-    <i class="fa-regular fa-calendar-plus fa-xl"></i>
-  </a>
-  {{- else -}}
-  &nbsp;
-  {{- end }}
+  </span>
+    {{ with  .OutputFormats.Get "calendar" -}}
+    <a class="concert-calendar-link" href="{{ .Permalink | safeURL }}">
+      <i class="fa-regular fa-calendar-plus fa-xl"></i>
+    </a>
+    {{- else -}}
+    &nbsp;
+    {{- end }}
 </div>
 <div class="concert-location">
 {{ .Params.location }}<br>

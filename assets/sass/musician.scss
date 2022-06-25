@@ -8,6 +8,8 @@
 @import 'pictures.scss';
 @import 'videos.scss';
 @import 'contact-form';
+@import 'concert';
+@import 'footer';
 
 .logo {
   margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
@@ -17,8 +19,6 @@
   min-height: 1rem;
   max-height: 4rem;
 }
-
-
 
 .body-home {
   @include default-body;
@@ -36,83 +36,6 @@
   {{ partial "helpers/background-image.scss" "images/404-background.jpg" }}
 }
 
-.footer-default {
-  padding: 1em 2em;
-  color: var(--footer-text-color);
-  background-color: var(--footer-background-color);
-}
-
-.footer-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  column-gap: 1em;
-  color: var(--footer-text-color);
-  a {
-    color: var(--footer-text-color);
-  }
-}
-
-.footer-left {
-  text-align: left;
-}
-
-.footer-center {
-  text-align: center;
-  a {
-    color: var(--footer-social-color);
-  }
-}
-
-.footer-right {
-  
-
-  * {
-    display: inline;
-    vertical-align: middle;
-  }
-}
-
-.social-media-button {
-}
-
-.concert-row-separator {
-  height: 1px;
-  width: 100%;
-}
-.concert-row {
-  display: grid;
-  grid-template-columns: 2fr 1fr 0.1fr 1fr 4fr 1fr;
-}
-.concert-single-info {
-  display: inline-flex;
-  align-items: center;
-  padding: 0em 0.5em 1.5em;
-  gap: 1em;
-}
-.concert-title {
-  padding-right: 1em;
-}
-.concert-summary {
-  padding: 0 1em;
-}
-.concert-date {
-  text-align: center;
-}
-.concert-calendar-link {
-  vertical-align: top;
-}
-.concert-location {
-  text-align: center;
-}
-.concert-share {
-  text-align: right;
-}
-.post-navigation {
-  margin-top: 1.5em;
-  font-style: italic;
-}
-
 .not-found-message {
   font-size: 5rem;
   text-align: center;
@@ -121,4 +44,7 @@
                 4px 14px 10px rgba(0,0,0,0.90),
                 6px 24px 2px rgba(0,0,0,0.7),
                 8px 34px 30px rgba(0,0,0,0.3);
+}
+
+.social-media-button {
 }

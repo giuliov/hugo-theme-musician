@@ -5,14 +5,15 @@
 {{ $paginator := .Paginate $pagesInOrder }}
 {{ template "_internal/pagination.html" . }}
 <div class="concerts-header"></div>
-{{ range $paginator.Pages }}
-<hr class="concert-row-separator">
-<div class="concert-row">
-  <div class="concert-title"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></div>
-  {{ partial "concerts/concert-info.html" . }}
-  <div class="concert-summary">{{ .Summary }}</div>
-  <div class="concert-share">{{ partial "social-sharing.html" . }}</div>
+<div class="concert-list">
+  {{ range $paginator.Pages }}
+  <div class="concert-row">
+    <div class="concert-title"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></div>
+    {{ partial "concerts/concert-info.html" . }}
+    <div class="concert-summary">{{ .Summary }}</div>
+    <div class="concert-share">{{ partial "social-sharing.html" . }}</div>
+  </div>
+  {{ end }}
 </div>
-{{ end }}
 </div>
 {{ end }}

@@ -1,3 +1,9 @@
+@mixin debug($c: red) {
+  outline-color: $c;
+  outline-style: dotted;
+  outline-width: 2px;
+}
+
 .flex {
   display: flex;
   gap: var(--gap, 1rem);

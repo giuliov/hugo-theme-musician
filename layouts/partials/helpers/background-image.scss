@@ -8,13 +8,13 @@
 
   background-size: cover;
   background-image: url('{{ $mobileBackgroundImage.RelPermalink }}');
-  @media (min-width: 35rem) {
+  @media (min-width: $mobileBreakSize) {
     background-position: center center;
     background-image: url('{{ $tabletBackgroundImage.RelPermalink }}');
   }
-  @media (min-width: 45rem) {
+  @media (min-width: $tabletBreakSize) {
     background-image: url('{{ $desktopBackgroundImage.RelPermalink }}');
   }
-  @media (min-width: 2401px) {
+  @media (min-width: $bigScreenBreakSize) {
     background-image: url('{{ $originalBackgroundImage.RelPermalink }}');
   }

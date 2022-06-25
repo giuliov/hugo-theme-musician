@@ -1,0 +1,34 @@
+.footer-default {
+  padding: 1em 2em;
+  color: var(--footer-text-color);
+  background-color: var(--footer-background-color);
+}
+
+.footer-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  column-gap: 1em;
+  color: var(--footer-text-color);
+  a {
+    color: var(--footer-text-color);
+  }
+}
+
+.footer-left {
+  text-align: left;
+}
+
+.footer-center {
+  text-align: center;
+  a {
+    color: var(--footer-social-color);
+  }
+}
+
+.footer-right {
+  * {
+    display: inline;
+    vertical-align: middle;
+  }
+}

@@ -17,7 +17,7 @@ A Hugo Theme for Musicians
 - [x] background images scaling
 - [x] contacts for mobile
 - [x] BUG: language switch should stay on page
-- [ ] media queries in concerts
+- [x] concerts layout for mobile
 - [ ] media queries in photos
 - [ ] media queries in videos
 - [ ] year grouping on past concerts/list
@@ -118,6 +118,36 @@ sass/
 |   |– _jquery-ui.scss    // jQuery UI
 |
 `– main.scss              // Main Sass file
+```
+
+```scss
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+@import 'vendors/bootstrap';
+@import 'vendors/jquery-ui';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'layout/navigation';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/forms';
+
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/slider';
+
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/contact';
+
+@import 'themes/theme';
+@import 'themes/admin';
 ```
 
 ## Quick links

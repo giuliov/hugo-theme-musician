@@ -39,10 +39,7 @@ nav {
   display: none;
 }
 
-$menuBreakSize: 35rem;
-$menuBreakSize2: 45rem;
-
-@media (max-width: $menuBreakSize) {
+@media (max-width: $mobileBreakSize) {
   .primary-navigation {
     --underline-gap: 0.5rem;
     position: fixed;
@@ -89,19 +86,19 @@ $menuBreakSize2: 45rem;
   }
 }
 
-@media (min-width: $menuBreakSize) {
+@media (min-width: $mobileBreakSize) {
   .primary-navigation {
     padding-inline: clamp(3rem, 7vw, 7rem);
   }
 }
 
-@media (min-width: $menuBreakSize) and (max-width: calc($menuBreakSize2 - 0.001rem)) {
+@media (min-width: $mobileBreakSize) and (max-width: calc($tabletBreakSize - 0.001rem)) {
   .primary-navigation a > span {
     display: none;
   }
 }
 
-@media (min-width: $menuBreakSize2) {
+@media (min-width: $tabletBreakSize) {
   .primary-header::after {
     content: "";
     display: block;
