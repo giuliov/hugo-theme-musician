@@ -1,21 +1,18 @@
-{{- $page := .Page -}}
-{{- with site.Params.showHiddenTest }}
+{{- $currentPage := .Page -}}
+{{- if site.Params.showHiddenTest }}
 <hr>
 
-{{ $d := now | time.AsTime }}
-{{ $d = $d.AddDate 0 0 1 }}
-Date: {{ $d }}
-<br>
-DateF: {{ $d.Format "2006-01-02T15:04:05Z07:00" }}
-<br>
+{{ $x := dict }}
+{{ $x = merge $x (dict "a" 10) }}
+{{ $x = merge $x (dict "b" 20) }}
+{{ $x }}<br>
 
-IsHome: {{ $page.IsHome }}
-<br>
+{{- $t := dict -}}
+{{- range $currentPage.Translations -}}
+{{- $t = merge $t (dict .Language.Lang .) -}}
+{{- end -}}
+{{ $t }}<br>
 
-{{- range $menuItemIndex, $menuItem := site.Menus.main }}
-Menu Name: {{ .Name }} &nbsp;&nbsp; URL: {{ .URL }}<br>
-Active: {{- (eq (printf "/%s/" $page.Type) .URL) -}}<br>
-{{ end -}}
 <br>
 
 <hr>

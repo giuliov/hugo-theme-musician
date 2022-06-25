@@ -16,10 +16,10 @@ A Hugo Theme for Musicians
   > photo-1558458878-36802fc5f7f5.jfif (@ Unsplash by Marina Reich)
 - [x] background images scaling
 - [x] contacts for mobile
+- [x] BUG: language switch should stay on page
 - [ ] media queries in concerts
 - [ ] media queries in photos
 - [ ] media queries in videos
-- [ ] BUG: language switch should stay on page
 - [ ] year grouping on past concerts/list
 - [ ] cookie policy
 - [ ] footer band (see Toha)

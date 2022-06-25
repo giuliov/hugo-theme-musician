@@ -1,10 +1,21 @@
 {{- if .Site.IsMultiLingual -}}
-{{ $currentLanguage := .Language.Lang -}}
-  {{/*- range (where site.Home.AllTranslations "Language.LanguageName" "ne" $currentLanguage) */}}
+  {{- $currentPage := .  }}
+  {{/* build a map from langCode->translationForCurrentPage */}}
+  {{- $cpt := dict -}}
+  {{- range $currentPage.Translations -}}
+  {{- $cpt = merge $cpt (dict .Language.Lang .) -}}
+  {{- end -}}  
   {{- range site.Home.AllTranslations }}
-  <li class="nav-item{{ if (eq .Language.Lang $currentLanguage) }} active{{ end }}">
-    {{ $flag := partial "helpers/get-flag-for-country.htm" .Language -}}
-    <a class="nav-link fi fi-{{ $flag }}" href="{{ .RelPermalink }}"></a>
-  </li>
+    {{- $sameLanguage := eq $currentPage.Language.Lang .Language.Lang -}}
+    <li class="nav-item{{ if $sameLanguage }} active{{ end }}">
+      {{ $flag := partial "helpers/get-flag-for-country.htm" .Language -}}
+      {{- if $sameLanguage }}
+        <a class="nav-link fi fi-{{ $flag }}" href="{{ $currentPage.RelPermalink }}"></a>
+      {{- else -}}
+        {{/* pick the page translation matching outer loop */}}
+        {{- $t := index $cpt .Language.Lang -}}
+        <a class="nav-link fi fi-{{ $flag }}" href="{{ $t.RelPermalink }}"></a>
+      {{- end }}
+    </li>
   {{- end }}
 {{- end -}}
