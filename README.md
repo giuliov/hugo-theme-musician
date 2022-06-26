@@ -18,8 +18,7 @@ A Hugo Theme for Musicians
 - [x] contacts for mobile
 - [x] BUG: language switch should stay on page
 - [x] concerts layout for mobile
-- [ ] media queries in photos
-- [ ] media queries in videos
+- [x] Staging
 - [ ] year grouping on past concerts/list
 - [ ] cookie policy
 - [ ] footer band (see Toha)

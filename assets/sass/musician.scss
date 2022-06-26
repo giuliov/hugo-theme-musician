@@ -23,6 +23,14 @@
 .body-home {
   @include default-body;
   {{ partial "helpers/background-image.scss" "images/home-background.jpg" }}
+  .title {
+    text-align: right;
+    margin-right: 1em;
+    @media (max-width: $mobileBreakSize) {
+      font-size: 2rem;
+      margin-right: .1em;
+    }
+  }
 }
 
 .body-page {
