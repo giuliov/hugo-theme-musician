@@ -1,10 +1,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {{- $description := printf "%s, %s, %s" .Site.Params.title .Site.Params.description .Title }}
+  <meta name="description" content='{{ $description }}'>
   {{ template "_internal/opengraph.html" . }}
   {{ partial "head/fonts.html" . }}
   {{ partial "head/css.html" . }}
-  {{ $title := print .Site.Title " | " .Title }}
-  {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+  {{- $title := print .Site.Title " | " .Title }}
+  {{- if .IsHome }}{{ $title = .Site.Title }}{{ end }}
   <title>{{ $title }}</title>
   {{ partial "head/favicon.html" . }}
   {{ partial "head/javascript.html" . }}

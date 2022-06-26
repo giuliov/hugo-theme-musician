@@ -1,3 +1,7 @@
+[current-language]
+other = "Current language: "
+[change-language]
+other = "Change to language: "
 [powered-by-hugo]
 other = "Powered by"
 [404-error]
@@ -33,6 +37,9 @@ other = 'Message'
 other = 'Enter Message here'
 [contact-form-button-send]
 other = 'Send'
+
+[add-concert-to-calendar]
+other = 'Add to calendar'
 
 [concerts]
 other = 'Concerts'

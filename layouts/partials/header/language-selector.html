@@ -10,11 +10,11 @@
     <li class="nav-item{{ if $sameLanguage }} active{{ end }}">
       {{ $flag := partial "helpers/get-flag-for-country.htm" .Language -}}
       {{- if $sameLanguage }}
-        <a class="nav-link fi fi-{{ $flag }}" href="{{ $currentPage.RelPermalink }}"></a>
+        <a class="nav-link fi fi-{{ $flag }}" href="{{ $currentPage.RelPermalink }}" aria-label='{{ i18n "current-language" }}{{ .Language }}'></a>
       {{- else -}}
         {{/* pick the page translation matching outer loop */}}
         {{- $t := index $cpt .Language.Lang -}}
-        <a class="nav-link fi fi-{{ $flag }}" href="{{ $t.RelPermalink }}"></a>
+        <a class="nav-link fi fi-{{ $flag }}" href="{{ $t.RelPermalink }}" aria-label='{{ i18n "change-language" }}{{ .Language }}'></a>
       {{- end }}
     </li>
   {{- end }}

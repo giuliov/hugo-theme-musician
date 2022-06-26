@@ -9,7 +9,7 @@
   <br>{{ i18n "at-time" }} {{ $localEventTime }}
   </span>
     {{ with  .OutputFormats.Get "calendar" -}}
-    <a class="concert-calendar-link" href="{{ .Permalink | safeURL }}">
+    <a class="concert-calendar-link" href="{{ .Permalink | safeURL }}" aria-label='{{ i18n "add-concert-to-calendar" }}'>
       <i class="fa-regular fa-calendar-plus fa-xl"></i>
     </a>
     {{- else -}}

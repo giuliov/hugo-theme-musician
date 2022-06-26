@@ -1,5 +1,9 @@
+[current-language]
+other = "Lingua: "
+[change-language]
+other = "Cambia lingua: "
 [powered-by-hugo]
-other = "Generato con"
+other = "Generato con "
 [404-error]
 other = 'Ahia... la pagina non esiste'
 [404-backhome]
@@ -40,6 +44,9 @@ other = 'Concerti'
 other = 'Foto'
 [videos]
 other = 'Video'
+
+[add-concert-to-calendar]
+other = 'Inserisci l’evento nel tuo calendario'
 
 [at-time]
 other = 'alle'
