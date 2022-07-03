@@ -19,13 +19,14 @@ A Hugo Theme for Musicians
 - [x] BUG: language switch should stay on page
 - [x] concerts layout for mobile
 - [x] Staging
-- [ ] year grouping on past concerts/list
+- [x] year grouping on past concerts/list
 - [ ] cookie policy
 - [ ] footer band (see Toha)
 - [ ] [Instagram User Token Generator](https://developers.facebook.com/docs/instagram-basic-display-api/overview#user-token-generator)
 - [ ] share => ical
 - [ ] replace Font Awesome with https://evil-icons.io/
 - [ ] explore https://icomoon.io/
+- [ ] https://www.toptal.com/developers/webdevchecklist
 
 ## Setup
 

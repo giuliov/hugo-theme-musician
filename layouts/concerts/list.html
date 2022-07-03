@@ -1,12 +1,10 @@
 {{ define "main" }}
 <div class="container">
 <h1>{{ i18n "concerts" }}</h1>
-{{ $pagesInOrder := (sort .Pages ".Params.eventDateTime" "desc") }}
-{{ $paginator := .Paginate $pagesInOrder }}
-{{ template "_internal/pagination.html" . }}
-<div class="concerts-header"></div>
+{{ range .Pages.GroupByParamDate "eventDateTime" "2006" }}
+<div class="concerts-header"><h2>{{ .Key }}</h2></div>
 <div class="concert-list">
-  {{ range $paginator.Pages }}
+  {{ range .Pages }}
   <div class="concert-row">
     <div class="concert-title"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></div>
     {{ partial "concerts/concert-info.html" . }}
@@ -15,5 +13,6 @@
   </div>
   {{ end }}
 </div>
+{{ end }}
 </div>
 {{ end }}
