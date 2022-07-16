@@ -6,7 +6,7 @@
 {{ range where .Site.RegularPages "Section" .Section }}
   {{- $image := (index (.Resources.ByType "image") 0) -}}
   {{- $imagetitle := .Title -}}
-  <article class="video-card">
+  <article class="video-gallery-card">
     <header>
       <h2>{{ $imagetitle }}</h2>
     </header>

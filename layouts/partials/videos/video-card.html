@@ -1,0 +1,14 @@
+<article class="video-card">
+  {{- $pc := site.Config.Privacy.YouTube -}}
+  {{- if not $pc.Disable -}}
+  {{- $ytHost := cond $pc.PrivacyEnhanced  "www.youtube-nocookie.com" "www.youtube.com" -}}
+  {{- $id := .Params.youtubeId -}}
+  {{- $title := .Title | default "YouTube Video" }}
+  <div class="video-youtube-embedded">
+    <iframe src="https://{{ $ytHost }}/embed/{{ $id }}" title="{{ $title }}" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+  </div>
+  <div class="video-card-tagline">
+    <span class="video-title">{{ $title }}</span>
+  </div>
+  {{ end -}}
+</article>

@@ -47,6 +47,8 @@ other = 'Concerts'
 other = 'Future and recent Concerts'
 [pictures]
 other = 'Pictures'
+[featured-videos]
+other = 'Recent Videos'
 [videos]
 other = 'Videos'
 

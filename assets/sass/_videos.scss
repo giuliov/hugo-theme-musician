@@ -1,7 +1,63 @@
+// --- videos in Home ---
+
+.videos-home-section {
+  margin-top: 4em;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-top: 1pt solid var(--card-outline-color);
+  border-bottom: 1pt solid var(--card-outline-color);
+  @media (min-width: $mobileBreakSize) {
+    padding: inherit;
+  }
+  h2 {
+    text-align: center;
+  }
+}
+
+.video-cards {
+  display: grid;
+  grid-template-columns: repeat($cardColumnSize);
+  grid-gap: 0.5 * $cardColumnGap;
+  justify-content: center;
+  padding-bottom: $cardPadding;
+  @media (min-width: $mobileBreakSize) {
+    grid-template-columns: repeat($numOfCards, $cardColumnSize);
+    grid-gap: $cardColumnGap;
+  }
+}
+.video-card {
+  padding: $cardPadding;
+  height: $cardSize;
+  border: 1px solid var(--card-outline-color);
+  border-radius: 3%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.video-youtube-embedded {
+  display: flex;
+  justify-content: center;
+  iframe {
+    border: 0;
+    width: 6 * $cardBase;
+    height: 4 * $cardBase;
+  }
+}
+.video-card-tagline{
+  padding-top: 0.5 * $cardPadding;
+  text-align: center;
+  overflow: hidden;
+  @media (min-width: $mobileBreakSize) {
+    padding-top: $cardPadding;
+  }
+}
+.video-title {
+}
+
+// --- videos in Videos ---
+
 .video-gallery {
   @include default-gallery;
 }
 
-.video-card {
+.video-gallery-card {
   @include default-card;
 }

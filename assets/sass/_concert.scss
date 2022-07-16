@@ -15,15 +15,6 @@
   }
 }
 
-$numOfCards: 3;
-$cardBase: 4rem;
-$cardSize: 5.5 * $cardBase;
-$cardColumnSize: 6.5 * $cardBase;
-$cardColumnGap: $cardBase;
-$cardPadding: 0.25 * $cardBase;
-$cardImageWidth: 5 * $cardBase;
-$cardImageHeight: 3.5 * $cardBase;
-
 .concert-cards {
   display: grid;
   grid-template-columns: repeat($cardColumnSize);
@@ -41,7 +32,6 @@ $cardImageHeight: 3.5 * $cardBase;
   border: 1px solid var(--card-outline-color);
   border-radius: 3%;
   background-color: rgba(0, 0, 0, 0.8);
-  .concert-calendar-link{}
 }
 .concert-card-image-container {
   display: flex;
@@ -64,7 +54,7 @@ $cardImageHeight: 3.5 * $cardBase;
   width: 0;
   text-align: right;
   font-size: large;
-  //z-index: 2;
+  z-index: 2;
   @media (min-width: $mobileBreakSize) {
     font-size: x-large;
   }

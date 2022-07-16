@@ -44,6 +44,8 @@ other = 'Concerti'
 other = 'Prossimi e ultimi concerti'
 [pictures]
 other = 'Foto'
+[featured-videos]
+other = 'Video recenti'
 [videos]
 other = 'Video'
 

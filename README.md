@@ -22,7 +22,8 @@ A Hugo Theme for Musicians
 - [x] year grouping on past concerts/list
 - [x] home section: concerts
 - [ ] sticky footer
-- [ ] home section: videos
+- [x] home section: videos
+- [ ] sections: do not repeat background pic, section height fraction of viewport height
 - [ ] cookie policy
 - [ ] footer band (see Toha)
 - [ ] [Instagram User Token Generator](https://developers.facebook.com/docs/instagram-basic-display-api/overview#user-token-generator)

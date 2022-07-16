@@ -46,3 +46,13 @@ a {
   color: var(--link-color);
   text-decoration: none;
 }
+
+$numOfCards: 3;
+$cardBase: 4rem;
+$cardSize: 5.5 * $cardBase;
+$cardColumnSize: 6.5 * $cardBase;
+$cardColumnGap: $cardBase;
+$cardPadding: 0.25 * $cardBase;
+$cardImageWidth: 5 * $cardBase;
+$cardImageHeight: 3.5 * $cardBase;
+
