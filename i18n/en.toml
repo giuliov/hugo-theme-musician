@@ -43,6 +43,8 @@ other = 'Add to calendar'
 
 [concerts]
 other = 'Concerts'
+[recent-concerts]
+other = 'Future and recent Concerts'
 [pictures]
 other = 'Pictures'
 [videos]

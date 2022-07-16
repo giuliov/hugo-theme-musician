@@ -40,6 +40,8 @@ other = 'Invia'
 
 [concerts]
 other = 'Concerti'
+[recent-concerts]
+other = 'Prossimi e ultimi concerti'
 [pictures]
 other = 'Foto'
 [videos]

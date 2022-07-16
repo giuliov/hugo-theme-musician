@@ -20,10 +20,10 @@ A Hugo Theme for Musicians
 - [x] concerts layout for mobile
 - [x] Staging
 - [x] year grouping on past concerts/list
+- [x] home section: concerts
 - [ ] cookie policy
 - [ ] footer band (see Toha)
 - [ ] [Instagram User Token Generator](https://developers.facebook.com/docs/instagram-basic-display-api/overview#user-token-generator)
-- [ ] share => ical
 - [ ] replace Font Awesome with https://evil-icons.io/
 - [ ] explore https://icomoon.io/
 - [ ] https://www.toptal.com/developers/webdevchecklist
@@ -170,6 +170,7 @@ sass/
 
 ### Misc
 <https://tachyons-bootstrap.dwyl.com/>
+<https://tailwind-elements.com/>
 <https://docs.netlify.com/>
 <https://github.com/SVG-Edit/svgedit>
 

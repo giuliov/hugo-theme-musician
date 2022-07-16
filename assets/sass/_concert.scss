@@ -1,3 +1,85 @@
+// --- concerts in Home ---
+
+.concerts-home-section {
+  margin-top: 12em;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-top: 1pt solid var(--card-outline-color);
+  border-bottom: 1pt solid var(--card-outline-color);
+  h2 {
+    text-align: center;
+  }
+}
+
+$numOfCards: 3;
+$cardBase: 4rem;
+$cardSize: 5.5 * $cardBase;
+$cardColumnSize: 6.5 * $cardBase;
+$cardColumnGap: $cardBase;
+$cardPadding: 0.25 * $cardBase;
+$cardImageWidth: 5 * $cardBase;
+$cardImageHeight: 3.5 * $cardBase;
+
+.concert-cards {
+  display: grid;
+  grid-template-columns: repeat($cardColumnSize);
+  grid-gap: 0.5 * $cardColumnGap;
+  justify-content: center;
+  padding-bottom: $cardPadding;
+  @media (min-width: $mobileBreakSize) {
+    grid-template-columns: repeat($numOfCards, $cardColumnSize);
+    grid-gap: $cardColumnGap;
+  }
+}
+.concert-card {
+  padding: $cardPadding;
+  height: $cardSize;
+  border: 1px solid var(--card-outline-color);
+  border-radius: 3%;
+  background-color: rgba(0, 0, 0, 0.8);
+  .concert-calendar-link{}
+}
+.concert-card-image-container {
+  display: flex;
+  justify-content: center;
+}
+.concert-card-image {
+  width: 0.8 * $cardImageWidth;
+  height: $cardImageHeight;
+  padding-inline-start: 1em;
+  padding-inline-end: 1em;
+  object-fit: fill;
+  @media (min-width: $mobileBreakSize) {
+    padding-inline-start: inherit;
+    padding-inline-end: inherit;
+    width: $cardImageWidth;
+    object-fit: scale-down;
+  }
+}
+.concert-card-calendar-add {
+  width: 0;
+  text-align: right;
+  font-size: large;
+  //z-index: 2;
+  @media (min-width: $mobileBreakSize) {
+    font-size: x-large;
+  }
+}
+.concert-card-tagline{
+  padding-top: 0.5 * $cardPadding;
+  text-align: center;
+  overflow: hidden;
+  @media (min-width: $mobileBreakSize) {
+    padding-top: $cardPadding;
+  }
+}
+.concert-card-title {
+  font-style: italic;
+}
+.concert-card-time{}
+.concert-card-location{}
+
+// --- concerts in Concerts ---
+
 .concert-list {
   margin-top: 1em;
 }

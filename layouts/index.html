@@ -3,4 +3,14 @@
 
 <h1 class="title">{{ .Site.Title }}</h1>
 
+<section class="concerts-home-section">
+<h2>{{ i18n "recent-concerts" }}</h2>
+<div class="concert-cards">
+{{- $concerts := where site.RegularPages "Section" "concerts" -}}
+{{- range first 3 ($concerts.ByParam "eventDateTime").Reverse -}}
+  {{ partial "concerts/concert-card.html" . }}
+{{- end -}}
+</div>
+</section>
+
 {{ end }}

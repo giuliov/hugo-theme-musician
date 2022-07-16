@@ -1,0 +1,38 @@
+{{- $page := . -}}
+{{- $eventDate := .Params.EventDateTime | time -}}
+{{- $isoEventDate := $eventDate.Format "2006-01-02T15:04:05Z0700" -}}
+{{- $localEventDate := time.Format ":date_long" $eventDate -}}
+{{- $localEventTime := time.Format ":time_short" $eventDate }}
+<div class="concert-card">
+  <div class="concert-card-image-container">
+    {{- with .Resources.GetMatch "*.jpg" }}
+    <a href="{{ $page.RelPermalink }}">
+      <img class="concert-card-image" src='{{ .RelPermalink }}' title="{{ $page.Title }}" />
+    </a>
+    {{- end }}
+    {{- if ge $eventDate now -}}
+    {{- with  .OutputFormats.Get "calendar" }}
+    <a class="concert-card-calendar-add" href="{{ .Permalink | safeURL }}" aria-label='{{ i18n "add-concert-to-calendar" }}'>
+      <i class="fa-regular fa-calendar-plus fa-xl"></i>
+    </a>
+    {{- end -}}
+    {{- end }}
+  </div>
+  <div class="concert-card-tagline">
+    <a href="{{ $page.RelPermalink }}">
+      <span class="concert-card-title">{{ .Title }}</span>
+    </a>
+    <br>
+    <a href="{{ $page.RelPermalink }}">
+      <span class="concert-card-time">
+        <time datetime="{{ $isoEventDate }}">{{ $localEventDate }}</time> {{ i18n "at-time" }} {{ $localEventTime }}
+      </span>
+    </a>
+    <br>
+    <a href="{{ $page.RelPermalink }}">
+      <span class="concert-card-location">
+      {{ .Params.location }}, {{ .Params.address }}, {{ .Params.city }}
+      </span>
+    </a>
+  </div>
+</div>
