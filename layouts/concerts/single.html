@@ -19,10 +19,10 @@
 
 <div class="post-navigation" id="prevNextNav">
   {{ with .PrevInSection }}
-    {{ i18n "next-in-section" }}<a class="previous" href="{{.Permalink}}">{{.Title}}</a>
+    {{ i18n "prev-in-section" }}<a class="previous" href="{{.Permalink}}">{{.Title}}</a>
   {{ end }}
   {{ with .NextInSection }}
-  {{ i18n "prev-in-section" }}<a class="next" href="{{.Permalink}}">{{.Title}}</a>
+  {{ i18n "next-in-section" }}<a class="next" href="{{.Permalink}}">{{.Title}}</a>
   {{ end }}
 </div>
 {{ end }}
