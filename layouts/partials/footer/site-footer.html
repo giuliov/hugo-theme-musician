@@ -13,9 +13,14 @@
     </div>
     <div class="footer-right">
       {{- $hugoLogo:= resources.Get "/images/hugo-logo.svg" }}
+      {{ i18n "powered-by-hugo" -}}
       <a id="hugo" href="https://gohugo.io/" target="_blank" rel="external noopener">
-        {{ i18n "powered-by-hugo" -}}
         <img src="{{ $hugoLogo.RelPermalink }}" alt="Hugo Logo" height="18" />
       </a>
+      {{ i18n "and-powered-by" -}}
+      <a href="https://github.com/giuliov/hugo-theme-musician" target="_blank" rel="external noopener">
+        <span class="theme-name">Musician</span>
+      </a>
+      {{- i18n "end-powered-by-theme" -}}
     </div>
   </div>

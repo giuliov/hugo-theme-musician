@@ -4,6 +4,10 @@ other = "Lingua: "
 other = "Cambia lingua: "
 [powered-by-hugo]
 other = "Generato con "
+[and-powered-by]
+other = " e il tema "
+[end-powered-by-theme]
+other = "."
 [404-error]
 other = 'Ahia... la pagina non esiste'
 [404-backhome]
@@ -38,6 +42,8 @@ other = 'Inserire il testo del Messaggio'
 [contact-form-button-send]
 other = 'Invia'
 
+[main-nav]
+other = 'Navigazione'
 [concerts]
 other = 'Concerti'
 [recent-concerts]

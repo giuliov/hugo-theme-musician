@@ -17,7 +17,7 @@
       <img src="{{ ($image.Fill "300x300 q50").Permalink }}" alt="{{ $imagetitle }}" title="{{ $imagetitle }}">
     </a>
   </article>
-  <a href="#" class="lightbox" id="img{{ $counter }}">
+  <a href="#" class="lightbox" id="img{{ $counter }}" title="{{ $imagetitle }}">
     <span style="background-image: url('{{ ($image.Fit "1600x1600 q50").Permalink }}')"></span>
   </a>
 {{ end }}

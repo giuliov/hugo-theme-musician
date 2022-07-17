@@ -1,20 +1,20 @@
-<button class="mobile-nav-toggle" aria-controls="primary-navigation">
+<button class="mobile-nav-toggle" type="button" aria-controls="primary-navigation">
   <span class="sr-only" role="button" aria-expanded="false">Menu</span>
 </button>
-<nav>
+<nav aria-label='{{ i18n "main-nav" }}'>
   <ul class="primary-navigation underline-indicators flex" id="primary-navigation" data-visible="false">
     {{- $page := .Page -}}
     {{- range .Site.Menus.main -}}
     {{- $active := (or (and $page.IsHome (eq .URL "/")) (eq (printf "/%s/" $page.Type) .URL)) }}
-    <a class="nav-link" href="{{ .URL | absLangURL }}">
-      <li class="nav-item{{ if $active }} active{{ end }}">
-      {{- $dir := site.Language.LanguageDirection | default "ltr" -}}
-      {{- if eq $dir "ltr" -}}{{ partial "header/nav-item-icon.html" . }}{{- end -}}
-      {{- $text := print .Name | safeHTML -}}
-      {{ $text -}}
-      {{- if ne $dir "ltr" -}}{{ partial "header/nav-item-icon.html" . }}{{- end -}}
-      </li>
-    </a>
+    <li class="nav-item{{ if $active }} active{{ end }}">
+      <a class="nav-link" href="{{ .URL | absLangURL }}">
+        {{- $dir := site.Language.LanguageDirection | default "ltr" -}}
+        {{- if eq $dir "ltr" -}}{{ partial "header/nav-item-icon.html" . }}{{- end -}}
+        {{- $text := print .Name | safeHTML -}}
+        {{ $text -}}
+        {{- if ne $dir "ltr" -}}{{ partial "header/nav-item-icon.html" . }}{{- end -}}
+      </a>
+    </li>
     {{- end -}}
     {{ partial "header/language-selector.html" . }}
   </ul>

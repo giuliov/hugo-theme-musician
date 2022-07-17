@@ -4,6 +4,10 @@ other = "Current language: "
 other = "Change to language: "
 [powered-by-hugo]
 other = "Powered by"
+[and-powered-by]
+other = " using "
+[end-powered-by-theme]
+other = " Theme"
 [404-error]
 other = 'Uh, oh... page not found'
 [404-backhome]
@@ -41,6 +45,8 @@ other = 'Send'
 [add-concert-to-calendar]
 other = 'Add to calendar'
 
+[main-nav]
+other = 'Main Navigation'
 [concerts]
 other = 'Concerts'
 [recent-concerts]
