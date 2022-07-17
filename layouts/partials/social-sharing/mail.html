@@ -1,6 +1,4 @@
 {{- $title := .Scratch.Get "title" -}}
 {{- $url := .Scratch.Get "url" -}}
 {{- $body := .Scratch.Get "body" -}}
-<a href="mailto:?subject={{ $title }}&body={{ $body }}" class="social-media-sharing-button email" target="_blank" rel="noopener" aria-label='{{ i18n "share-button-label" }} Mail'>
-<i class="fa-solid fa-envelope" aria-hidden="true"></i>
-</a>
+<a href="mailto:?subject={{ $title }}&body={{ $body }}" class="social-media-sharing-button email" target="_blank" rel="noopener" aria-label='{{ i18n "share-button-label" }} Mail'><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>

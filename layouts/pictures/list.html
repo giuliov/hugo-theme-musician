@@ -2,7 +2,7 @@
 <div class="container">
 <h1>{{ i18n "pictures" }}</h1>
 
-<div class="image-gallery">
+<section class="image-gallery">
 {{ $counter := 0 }}
 {{ range where .Site.RegularPages "Section" .Section }}
   {{ $counter = add $counter 1 }}
@@ -21,7 +21,7 @@
     <span style="background-image: url('{{ ($image.Fit "1600x1600 q50").Permalink }}')"></span>
   </a>
 {{ end }}
-</div>
+</section>
 
 </div>
 {{ end }}

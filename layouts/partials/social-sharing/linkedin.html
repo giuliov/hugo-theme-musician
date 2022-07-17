@@ -1,6 +1,4 @@
 {{- $title := .Scratch.Get "title" -}}
 {{- $url := .Scratch.Get "url" -}}
 {{- $body := .Scratch.Get "body" -}}
-<a href="https://www.linkedin.com/shareArticle?url={{ $url }}&title={{ $title }}" class="social-media-sharing-button linkedin" target="_blank" rel="noopener" aria-label='{{ i18n "share-button-label" }} LinkedIn'>
-<i class="fab fa-linkedin" aria-hidden="true"></i>
-</a>
+<a href="https://www.linkedin.com/shareArticle?url={{ $url }}&title={{ $title }}" class="social-media-sharing-button linkedin" target="_blank" rel="noopener" aria-label='{{ i18n "share-button-label" }} LinkedIn'><i class="fab fa-linkedin" aria-hidden="true"></i></a>

@@ -16,7 +16,7 @@
 <section class="videos-home-section">
   <h2>{{ i18n "featured-videos" }}</h2>
   <div class="video-cards">
-  {{- $videos := where site.RegularPages "Section" "videos" -}}
+  {{ $videos := where site.RegularPages "Section" "videos" -}}
   {{- $videos = where $videos "Params.featured" true -}}
   {{- range first 3 $videos.ByDate.Reverse -}}
     {{ partial "videos/video-card.html" . }}
@@ -28,9 +28,9 @@
   {{- range where site.RegularPages "Type" "bio" -}}
   <h2>{{ .Title }}</h2>
   <article class="bio-text">
-    {{ .Content }}
+    {{ chomp .Content }}
   </article>
-  {{- end -}}
+  {{- end }}
 </section>
 
 {{ end }}

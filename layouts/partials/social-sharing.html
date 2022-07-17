@@ -4,11 +4,11 @@
 {{- $page := . -}}
 {{- .Scratch.Set "title" $title -}}
 {{- .Scratch.Set "url" $url -}}
-{{- .Scratch.Set "body" $body -}}
-<span class="social-media-sharing">
-  {{ i18n "share-button-desc" }}
-  {{- range $value := site.Params.socialsharing -}}
-  {{- $partial := printf "social-sharing/%s.html" $value -}}
-  {{ partial $partial $page }}
-  {{- end -}}
-</span>
+{{- .Scratch.Set "body" $body }}
+      <span class="social-media-sharing">
+        {{ i18n "share-button-desc" }}
+        {{- range $value := site.Params.socialsharing -}}
+        {{- $partial := printf "social-sharing/%s.html" $value }}
+        {{ partial $partial $page }}
+        {{- end }}
+      </span>

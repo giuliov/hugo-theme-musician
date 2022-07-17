@@ -1,6 +1,4 @@
 {{- $title := .Scratch.Get "title" -}}
 {{- $url := .Scratch.Get "url" -}}
 {{- $body := .Scratch.Get "body" -}}
-<a href="https://telegram.me/share/url?text={{ $title }}&url={{ $url }}" class="social-media-sharing-button telegram" target="_blank" rel="noopener" aria-label='{{ i18n "share-button-label" }} Telegram'>
-<i class="fab fa-telegram" aria-hidden="true"></i>
-</a>
+<a href="https://telegram.me/share/url?text={{ $title }}&url={{ $url }}" class="social-media-sharing-button telegram" target="_blank" rel="noopener" aria-label='{{ i18n "share-button-label" }} Telegram'><i class="fab fa-telegram" aria-hidden="true"></i></a>

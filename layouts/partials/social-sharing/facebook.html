@@ -1,6 +1,4 @@
 {{- $title := .Scratch.Get "title" -}}
 {{- $url := .Scratch.Get "url" -}}
 {{- $body := .Scratch.Get "body" -}}
-<a href="https://www.facebook.com/sharer.php?u={{ $url }}" class="social-media-sharing-button facebook" target="_blank" rel="noopener" aria-label='{{ i18n "share-button-label" }} Facebook'>
-<i class="fab fa-facebook" aria-hidden="true"></i>
-</a>
+<a href="https://www.facebook.com/sharer.php?u={{ $url }}" class="social-media-sharing-button facebook" target="_blank" rel="noopener" aria-label='{{ i18n "share-button-label" }} Facebook'><i class="fab fa-facebook" aria-hidden="true"></i></a>

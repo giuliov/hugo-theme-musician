@@ -1,25 +1,25 @@
-{{ .Params.subtitle }}
-{{ $eventDate := .Params.EventDateTime | time -}}
+{{- .Params.subtitle -}}
+{{- $eventDate := .Params.EventDateTime | time -}}
 {{- $isoEventDate := $eventDate.Format "2006-01-02T15:04:05Z0700" -}}
 {{- $localEventDate := time.Format ":date_long" $eventDate -}}
 {{- $localEventTime := time.Format ":time_short" $eventDate -}}
-<div class="concert-date">
-  <span>
-  <time datetime="{{ $isoEventDate }}">{{ $localEventDate }}</time>
-  <br>{{ i18n "at-time" }} {{ $localEventTime }}
-  </span>
-    {{ if ge $eventDate now -}}
-    {{ with  .OutputFormats.Get "calendar" -}}
-    <a class="concert-calendar-link" href="{{ .Permalink | safeURL }}" aria-label='{{ i18n "add-concert-to-calendar" }}'>
-      <i class="fa-regular fa-calendar-plus fa-xl"></i>
-    </a>
-    {{- else -}}
-    &nbsp;
-    {{- end }}
-    {{- end }}
-</div>
-<div class="concert-location">
-{{ .Params.location }}<br>
-{{ .Params.address }}<br>
-{{ .Params.city }}
-</div>
+      <div class="concert-date">
+        <span>
+        <time datetime="{{ $isoEventDate }}">{{ $localEventDate }}</time>
+        <br>{{ i18n "at-time" }} {{ $localEventTime }}
+        </span>
+          {{- if ge $eventDate now -}}
+          {{- with  .OutputFormats.Get "calendar" -}}
+          <a class="concert-calendar-link" href="{{ .Permalink | safeURL }}" aria-label='{{ i18n "add-concert-to-calendar" }}'>
+            <i class="fa-regular fa-calendar-plus fa-xl"></i>
+          </a>
+          {{- else -}}
+          &nbsp;
+          {{- end -}}
+          {{- end }}
+      </div>
+      <div class="concert-location">
+        {{ .Params.location }}<br>
+        {{ .Params.address }}<br>
+        {{ .Params.city }}
+      </div>

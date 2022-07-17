@@ -1,19 +1,15 @@
 {{- $currentPage := .Page -}}
+
 {{- if site.Params.showHiddenTest }}
+{{ if $currentPage.Params.EventDateTime }}
 <hr>
 
-{{ $x := dict }}
-{{ $x = merge $x (dict "a" 10) }}
-{{ $x = merge $x (dict "b" 20) }}
-{{ $x }}<br>
 
-{{- $t := dict -}}
-{{- range $currentPage.Translations -}}
-{{- $t = merge $t (dict .Language.Lang .) -}}
-{{- end -}}
-{{ $t }}<br>
-
-<br>
+{{ $eventDate := $currentPage.Params.EventDateTime | time -}}
+event = {{ $eventDate.Unix }}<br>
+now = {{ now.Unix }}<br>
+{{ if ge $eventDate now }}FUTURE{{ else }}PAST{{ end }}<br>
 
 <hr>
+{{ end -}}
 {{ end -}}

@@ -3,7 +3,7 @@
 {{- $isoEventDate := $eventDate.Format "2006-01-02T15:04:05Z0700" -}}
 {{- $localEventDate := time.Format ":date_long" $eventDate -}}
 {{- $localEventTime := time.Format ":time_short" $eventDate }}
-<div class="concert-card">
+<article class="concert-card">
   <div class="concert-card-image-container">
     {{- with .Resources.GetMatch "*.jpg" }}
     <a href="{{ $page.RelPermalink }}">
@@ -35,4 +35,4 @@
       </span>
     </a>
   </div>
-</div>
+</article>
