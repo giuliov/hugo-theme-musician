@@ -3,6 +3,7 @@
   color: var(--text-color);
   display: grid;
   grid-template-rows: min-content 1fr auto;
+  background: var(--background-color);
   background-size: cover;
   background-position: bottom center;
   overflow-x: hidden;

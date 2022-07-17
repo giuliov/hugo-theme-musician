@@ -23,5 +23,14 @@
   {{- end -}}
   </div>
 </section>
-  
+
+<section class="bio-home-section">
+  {{- range where site.RegularPages "Type" "bio" -}}
+  <h2>{{ .Title }}</h2>
+  <article class="bio-text">
+    {{ .Content }}
+  </article>
+  {{- end -}}
+</section>
+
 {{ end }}

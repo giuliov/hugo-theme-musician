@@ -21,10 +21,11 @@ A Hugo Theme for Musicians
 - [x] Staging
 - [x] year grouping on past concerts/list
 - [x] home section: concerts
-- [ ] sticky footer
+- [ ] sticky footer on small device
 - [x] home section: videos
-- [ ] sections: do not repeat background pic, section height fraction of viewport height
-- [ ] cookie policy
+- [x] home section: bio
+- [x] sections: do not repeat background pic, section height fraction of viewport height
+- [ ] cookie policy (=> youtube)
 - [ ] footer band (see Toha)
 - [ ] [Instagram User Token Generator](https://developers.facebook.com/docs/instagram-basic-display-api/overview#user-token-generator)
 - [ ] replace Font Awesome with https://evil-icons.io/

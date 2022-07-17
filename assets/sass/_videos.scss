@@ -3,10 +3,11 @@
 .videos-home-section {
   margin-top: 4em;
   padding: 1em;
-  background-color: rgba(0, 0, 0, 0.4);
+  //background-color: rgba(0, 0, 0, 0.4);
   border-top: 1pt solid var(--card-outline-color);
   border-bottom: 1pt solid var(--card-outline-color);
   @media (min-width: $mobileBreakSize) {
+    margin-top: 10.5em;
     padding: inherit;
   }
   h2 {

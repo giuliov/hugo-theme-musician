@@ -9,6 +9,7 @@
 @import 'videos.scss';
 @import 'contact-form';
 @import 'concert';
+@import 'bio';
 @import 'footer';
 
 .logo {
@@ -23,6 +24,7 @@
 .body-home {
   @include default-body;
   {{ partial "helpers/background-image.scss" "images/home-background.jpg" }}
+  background-repeat: no-repeat;
   .title {
     text-align: right;
     margin-right: 1em;
@@ -35,12 +37,10 @@
 
 .body-page {
   @include default-body;
-  background: var(--background-color);
 }
 
 .body-not-found {
   @include default-body;
-  background: var(--background-color);
   {{ partial "helpers/background-image.scss" "images/404-background.jpg" }}
 }
 
