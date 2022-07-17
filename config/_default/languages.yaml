@@ -4,6 +4,8 @@ en:
   languageName: English
   params:
     flag: gb
+    # work around empty .Language.LanguageName bug
+    name: English
   menu:
     main:
     - name: "Home"
@@ -41,6 +43,7 @@ it:
   languageName: Italiano
   params:
     flag: it
+    name: Italiano
   menu:
     main:
     - name: "Home"

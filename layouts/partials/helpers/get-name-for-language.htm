@@ -1,0 +1,9 @@
+{{ $langCode := .Lang }}
+{{ $name := $langCode }}
+{{ range site.Site.Languages }}
+  {{ if eq .Lang $langCode }}
+    {{ $name = .Params.name }}
+    {{break}}
+  {{ end }}
+{{ end }}
+{{ return $name }}
