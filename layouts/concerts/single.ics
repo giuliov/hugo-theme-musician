@@ -5,14 +5,14 @@
 {{- $address = printf "%s,%s,%s" .address .city .country | urlquery -}}
 {{- end -}}
 {{- with site.Params.mapquestapikey -}}
-{{- $url := printf "https://www.mapquestapi.com/geocoding/v1/address?key=%s&location=%s" . $address -}}
-{{- $mapped := getJSON $url -}}
+{{/* $url := printf "https://www.mapquestapi.com/geocoding/v1/address?key=%s&location=%s" . $address -}}
+{{- $mapped := "__getJSON $url" -}}
 {{- range first 1 $mapped.results -}}
 {{- range first 1 .locations -}}
 {{- $addressLatLong = printf "%f;%f" .latLng.lat .latLng.lng -}}
 {{- $addressMapURL = .mapUrl -}}
 {{- end -}}
-{{- end -}}
+{{- end */}}
 {{- end -}}
 BEGIN:VCALENDAR
 VERSION:2.0
