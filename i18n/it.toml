@@ -54,6 +54,8 @@ other = 'Foto'
 other = 'Video recenti'
 [videos]
 other = 'Video'
+[bio]
+other = 'Biografia'
 
 [add-concert-to-calendar]
 other = 'Inserisci l’evento nel tuo calendario'

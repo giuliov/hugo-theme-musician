@@ -13,8 +13,10 @@
     background-image: url('{{ $tabletBackgroundImage.RelPermalink }}');
   }
   @media (min-width: $tabletBreakSize) {
+    background-position: top center;
     background-image: url('{{ $desktopBackgroundImage.RelPermalink }}');
   }
   @media (min-width: $bigScreenBreakSize) {
+    background-position: top center;
     background-image: url('{{ $originalBackgroundImage.RelPermalink }}');
   }

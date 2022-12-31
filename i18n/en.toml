@@ -57,6 +57,8 @@ other = 'Pictures'
 other = 'Recent Videos'
 [videos]
 other = 'Videos'
+[bio]
+other = 'Short Biography'
 
 [at-time]
 other = 'at'
