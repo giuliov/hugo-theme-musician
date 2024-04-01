@@ -1,5 +1,9 @@
+{{- with $.Page.Site.Params.googleRecaptchaSitekey -}}
+<script src='https://www.google.com/recaptcha/api.js' async defer></script>
+{{- end -}}
 {{- with $.Page.Site.Params.contactformurl -}}
-<form accept-charset="UTF-8" action="{{ . }}" method="POST" class="contact-form">
+<form accept-charset="UTF-8" action="{{ . }}" method="POST" class="contact-form" 
+enctype="multipart/form-data">
 
   <div>
     <p aria-hidden="true">
@@ -31,6 +35,10 @@
     <textarea name="message" id="message" rows="5" autocomplete="false" spellcheck="true" placeholder='{{ i18n "contact-form-placeholder-message" }}' required aria-required="true"></textarea>
   </div>
   
+  {{- with $.Page.Site.Params.googleRecaptchaSitekey -}}
+  <div class="g-recaptcha" data-sitekey="{{ . }}"></div>
+  {{- end -}}
+
   <div>
     <button type="submit">{{ i18n "contact-form-button-send" }}</button>
   </div>
