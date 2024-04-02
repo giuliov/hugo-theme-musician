@@ -1,5 +1,5 @@
 {{- with $.Page.Site.Params.googleRecaptchaSitekey -}}
-<script src="https://www.google.com/recaptcha/enterprise.js?render={{ . }}"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {{- end -}}
 {{- with $.Page.Site.Params.contactformurl -}}
 <form accept-charset="UTF-8" action="{{ . }}" method="POST" class="contact-form" 
@@ -36,7 +36,7 @@ enctype="multipart/form-data">
   </div>
   
   {{- with $.Page.Site.Params.googleRecaptchaSitekey -}}
-  <div class="g-recaptcha" data-sitekey="{{ . }}"></div>
+  <div class="g-recaptcha" data-sitekey="{{ . }}" hl="{{ $.Page.Site.Language.Lang }}"></div>
   {{- end -}}
 
   <div>
